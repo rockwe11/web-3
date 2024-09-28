@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello, world!!!")
+	var a string
+	fmt.Scan(&a)
+	rs := []rune(a)
+	for i := range rs {
+		fmt.Print((rs[i] - 48) * (rs[i] - 48))
+	}
 }
